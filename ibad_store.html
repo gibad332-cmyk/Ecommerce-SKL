@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ibad Store.</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f8f8;
+      color: #222;
+    }
+
+    .navbar-brand {
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      background-color: #e9ecef;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+      background-color: white;
+      padding: 15px;
+    }
+
+    .product-img {
+      height: 210px;
+      width: 100%;
+      object-fit: contain;
+      background-color: white;
+      padding: 12px;
+    }
+
+    .card {
+      border: 1px solid #e1e1e1;
+    }
+
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .section-title {
+      border-bottom: 2px solid #222;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    footer a:hover {
+      text-decoration: underline !important;
+    }
+
+    @media (max-width: 576px) {
+      .hero-img {
+        height: 230px;
+      }
+
+      .product-img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#home">IBAD STORE.</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+        aria-controls="mainMenu" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <div class="navbar-nav ms-auto align-items-lg-center">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#products">Products</a>
+          <a class="nav-link" href="#faq">FAQ</a>
+          <button class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0" data-bs-toggle="offcanvas"
+            data-bs-target="#cart">
+            <i class="bi bi-cart3"></i> Cart
+            <span id="cartCount" class="badge bg-warning text-dark">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME / HERO -->
+  <section id="home" class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <p class="text-primary fw-bold mb-2">WELCOME TO IBAD STORE</p>
+          <h1 class="display-5 fw-bold">Sepatu Keren,<br>Harga Bersahabat.</h1>
+          <p class="text-secondary">
+            Temukan sepatu untuk sekolah, jalan-jalan, dan aktivitas sehari-hari.
+            Pilih model favorit lu di Ibad Store.
+          </p>
+          <a href="#products" class="btn btn-dark px-4">Lihat Produk</a>
+          <a href="#faq" class="btn btn-outline-dark px-4 ms-2">Info Toko</a>
+        </div>
+
+        <div class="col-md-6">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+            class="hero-img border rounded" alt="Sepatu olahraga merah">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SINGKAT -->
+  <section class="bg-white py-3 border-bottom">
+    <div class="container">
+      <div class="row text-center g-3">
+        <div class="col-4">
+          <i class="bi bi-tags fs-4"></i>
+          <p class="mb-0 small fw-semibold">Harga Terjangkau</p>
+        </div>
+        <div class="col-4">
+          <i class="bi bi-shield-check fs-4"></i>
+          <p class="mb-0 small fw-semibold">Belanja Mudah</p>
+        </div>
+        <div class="col-4">
+          <i class="bi bi-bag-check fs-4"></i>
+          <p class="mb-0 small fw-semibold">Banyak Pilihan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="container py-5">
+    <div class="text-center mb-4">
+      <h2 class="section-title fw-bold">Daftar Sepatu</h2>
+      <p class="text-secondary mt-3">Pilih sepatu yang cocok dengan gaya lu.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-6 col-md-4 col-lg-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+            class="product-img card-img-top" alt="Red Runner">
+          <div class="card-body">
+            <span class="badge bg-secondary">Running</span>
+            <h5 class="card-title mt-2">Red Runner</h5>
+            <p class="fw-bold mb-3">Rp350.000</p>
+            <button class="btn btn-dark w-100" onclick="chooseProduct(0)">Lihat Produk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-6 col-md-4 col-lg-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+            class="product-img card-img-top" alt="Classic White">
+          <div class="card-body">
+            <span class="badge bg-secondary">Casual</span>
+            <h5 class="card-title mt-2">Classic White</h5>
+            <p class="fw-bold mb-3">Rp275.000</p>
+            <button class="btn btn-dark w-100" onclick="chooseProduct(1)">Lihat Produk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-6 col-md-4 col-lg-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+            class="product-img card-img-top" alt="Street Blue">
+          <div class="card-body">
+            <span class="badge bg-secondary">Streetwear</span>
+            <h5 class="card-title mt-2">Street Blue</h5>
+            <p class="fw-bold mb-3">Rp320.000</p>
+            <button class="btn btn-dark w-100" onclick="chooseProduct(2)">Lihat Produk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-6 col-md-4 col-lg-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80"
+            class="product-img card-img-top" alt="Daily Black">
+          <div class="card-body">
+            <span class="badge bg-secondary">Casual</span>
+            <h5 class="card-title mt-2">Daily Black</h5>
+            <p class="fw-bold mb-3">Rp290.000</p>
+            <button class="btn btn-dark w-100" onclick="chooseProduct(3)">Lihat Produk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-6 col-md-4 col-lg-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
+            class="product-img card-img-top" alt="Sport Grey">
+          <div class="card-body">
+            <span class="badge bg-secondary">Sport</span>
+            <h5 class="card-title mt-2">Sport Grey</h5>
+            <p class="fw-bold mb-3">Rp310.000</p>
+            <button class="btn btn-dark w-100" onclick="chooseProduct(4)">Lihat Produk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-6 col-md-4 col-lg-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+            class="product-img card-img-top" alt="Canvas Low">
+          <div class="card-body">
+            <span class="badge bg-secondary">Canvas</span>
+            <h5 class="card-title mt-2">Canvas Low</h5>
+            <p class="fw-bold mb-3">Rp220.000</p>
+            <button class="btn btn-dark w-100" onclick="chooseProduct(5)">Lihat Produk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detail Sepatu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" id="modalImage" class="img-fluid mb-3" alt="Sepatu yang dipilih">
+          <h5 id="modalName"></h5>
+          <p id="modalPrice" class="fw-bold"></p>
+
+          <label for="productSize" class="form-label">Pilih Ukuran</label>
+          <select class="form-select mb-3" id="productSize">
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40" selected>40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+          </select>
+
+          <label for="productQty" class="form-label">Jumlah</label>
+          <input type="number" class="form-control" id="productQty" value="1" min="1">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-dark w-100" onclick="addToCart()">Tambahkan ke Keranjang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART OFFCANVAS -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartTitle">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold" id="cartTitle">Keranjang Belanja</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems">
+        <p class="text-secondary">Keranjang masih kosong.</p>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between mb-3">
+        <span>Total</span>
+        <strong id="cartTotal">Rp0</strong>
+      </div>
+      <button class="btn btn-dark w-100" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ringkasan Pesanan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <div id="checkoutItems"></div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <strong>Total Pembayaran</strong>
+            <strong id="checkoutTotal">Rp0</strong>
+          </div>
+          <p class="text-secondary small mt-3 mb-0">
+            Ini hanya simulasi checkout untuk tugas sekolah. Pembayaran asli belum tersedia.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-dark" data-bs-dismiss="modal">Kembali Belanja</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section id="faq" class="container py-5">
+    <div class="text-center mb-4">
+      <h2 class="section-title fw-bold">Pertanyaan Umum</h2>
+      <p class="text-secondary mt-3">Informasi singkat tentang Ibad Store.</p>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Apa itu Ibad Store?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ibad Store adalah contoh website toko sepatu yang dibuat untuk latihan e-commerce menggunakan Bootstrap.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Bagaimana cara memilih sepatu?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Tekan tombol "Lihat Produk", pilih ukuran dan jumlah, lalu tekan "Tambahkan ke Keranjang".
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Apakah checkout bisa digunakan untuk pembayaran asli?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Belum. Fitur checkout pada website ini hanya simulasi dan belum terhubung dengan sistem pembayaran.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            Apakah ukuran sepatu bisa dipilih?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Bisa. Pilih ukuran yang tersedia pada bagian detail produk sebelum menambahkan sepatu ke keranjang.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <h4 class="fw-bold">IBAD STORE.</h4>
+      <p class="text-white-50 mb-2">Sepatu pilihan untuk aktivitas sehari-hari.</p>
+      <a href="#home" class="text-white text-decoration-none">Kembali ke Atas</a>
+      <hr>
+      <p class="small text-white-50 mb-0">Ibad Store. &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Data produk sepatu
+    const products = [
+      {
+        name: "Red Runner",
+        price: 350000,
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        name: "Classic White",
+        price: 275000,
+        image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        name: "Street Blue",
+        price: 320000,
+        image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        name: "Daily Black",
+        price: 290000,
+        image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        name: "Sport Grey",
+        price: 310000,
+        image: "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        name: "Canvas Low",
+        price: 220000,
+        image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+
+    let cartItems = [];
+    let selectedProduct = 0;
+
+    // Mengubah angka menjadi format Rupiah
+    function formatPrice(price) {
+      return "Rp" + price.toLocaleString("id-ID");
+    }
+
+    // Membuka modal detail produk
+    function chooseProduct(index) {
+      selectedProduct = index;
+
+      document.getElementById("modalName").textContent = products[index].name;
+      document.getElementById("modalPrice").textContent = formatPrice(products[index].price);
+      document.getElementById("modalImage").src = products[index].image;
+      document.getElementById("productQty").value = 1;
+
+      new bootstrap.Modal(document.getElementById("productModal")).show();
+    }
+
+    // Menambahkan produk ke keranjang
+    function addToCart() {
+      const product = products[selectedProduct];
+      const size = document.getElementById("productSize").value;
+      const qty = Number(document.getElementById("productQty").value);
+
+      if (!Number.isInteger(qty) || qty < 1) {
+        alert("Jumlah sepatu minimal 1.");
+        return;
+      }
+
+      const existingItem = cartItems.find(function(item) {
+        return item.name === product.name && item.size === size;
+      });
+
+      if (existingItem) {
+        existingItem.qty += qty;
+      } else {
+        cartItems.push({
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          size: size,
+          qty: qty
+        });
+      }
+
+      updateCart();
+      bootstrap.Modal.getInstance(document.getElementById("productModal")).hide();
+    }
+
+    // Memperbarui isi keranjang
+    function updateCart() {
+      const container = document.getElementById("cartItems");
+      container.innerHTML = "";
+
+      let total = 0;
+      let count = 0;
+
+      if (cartItems.length === 0) {
+        container.innerHTML = '<p class="text-secondary">Keranjang masih kosong.</p>';
+      }
+
+      cartItems.forEach(function(item, index) {
+        total += item.price * item.qty;
+        count += item.qty;
+
+        container.innerHTML += `
+          <div class="d-flex gap-3 mb-4">
+            <img src="${item.image}" alt="${item.name}" width="80" height="85" class="object-fit-contain">
+            <div class="flex-grow-1">
+              <h6>${item.name}</h6>
+              <p class="small text-secondary mb-1">Ukuran: ${item.size}</p>
+              <p class="small mb-1">Jumlah: ${item.qty}</p>
+              <strong>${formatPrice(item.price * item.qty)}</strong>
+              <div>
+                <button class="btn btn-sm btn-outline-danger mt-2" onclick="removeItem(${index})">
+                  <i class="bi bi-trash"></i> Hapus
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById("cartCount").textContent = count;
+      document.getElementById("cartTotal").textContent = formatPrice(total);
+    }
+
+    // Menghapus produk dari keranjang
+    function removeItem(index) {
+      cartItems.splice(index, 1);
+      updateCart();
+    }
+
+    // Menampilkan ringkasan checkout
+    function checkout() {
+      if (cartItems.length === 0) {
+        alert("Keranjang masih kosong!");
+        return;
+      }
+
+      const checkoutItems = document.getElementById("checkoutItems");
+      checkoutItems.innerHTML = "";
+
+      let total = 0;
+
+      cartItems.forEach(function(item) {
+        const subtotal = item.price * item.qty;
+        total += subtotal;
+
+        checkoutItems.innerHTML += `
+          <div class="d-flex justify-content-between gap-3 mb-2">
+            <span>${item.name} (Ukuran ${item.size}) x ${item.qty}</span>
+            <span>${formatPrice(subtotal)}</span>
+          </div>
+        `;
+      });
+
+      document.getElementById("checkoutTotal").textContent = formatPrice(total);
+
+      const cartCanvas = bootstrap.Offcanvas.getInstance(document.getElementById("cart"));
+      cartCanvas.hide();
+
+      setTimeout(function() {
+        new bootstrap.Modal(document.getElementById("checkoutModal")).show();
+      }, 300);
+    }
+  </script>
+</body>
+</html>
